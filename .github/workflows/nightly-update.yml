@@ -1,0 +1,20 @@
+name: nightly update
+on:
+  schedule:
+    - cron:  '0 0 * * *'
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install
+        run: sudo apt-get install lftp"
+      - name: update
+        run: ./update.sh
+      - name: push
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email ""
+          git add .
+          git commit -m "nightly update"
+          git push
