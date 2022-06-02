@@ -2,7 +2,7 @@ name: periodic-update
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '10 3/6 * * *'
+    - cron:  '10 5/6 * * *'
 jobs:
   periodic-update:
     runs-on: ubuntu-latest
