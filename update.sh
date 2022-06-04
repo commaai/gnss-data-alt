@@ -1,9 +1,9 @@
 #!/bin/bash -e
 
 cd "$(dirname "$0")"
-HH="[0-3][0-9]"
+HH="[0-1][0-8]" # Ultra-Rapid releases with file suffixes 00,06,12,18
 DD="[0-3][0-9]"
-MM="[0-1][0-9]"
+MM="[0-3][0-9]"
 YY="[0-9][0-9]"
 DOY="[0-9][0-9][0-9]"
 DOW="[0-9]"
